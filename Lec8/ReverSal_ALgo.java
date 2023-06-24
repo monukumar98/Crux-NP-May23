@@ -11,7 +11,6 @@ public class ReverSal_ALgo {
 			System.out.print(arr[i] + " ");
 		}
 	}
-
 	public static void Rotate(int[] arr, int k) {
 		// TODO Auto-generated method stub
 		k = k % arr.length;
@@ -22,7 +21,6 @@ public class ReverSal_ALgo {
 		Reverse(arr, n - k, n - 1);
 		// complete
 		Reverse(arr, 0, n - 1);
-
 	}
 
 	public static void Reverse(int[] arr, int i, int j) {
