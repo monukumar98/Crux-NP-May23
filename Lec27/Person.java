@@ -1,7 +1,7 @@
 package Lec27;
 
 public class Person {
-	int age = 16;
+ int age = 16;
 	String name = "Kaju";
 
 //	public Person() {
