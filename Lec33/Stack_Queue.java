@@ -35,6 +35,7 @@ public class Stack_Queue {
 		return rv;
 	}
 
+  //O(N)
 	public int peek() throws Exception {
 		DyamicQueue hlp = new DyamicQueue();
 		while (q.size() > 1) {
@@ -47,6 +48,7 @@ public class Stack_Queue {
 		q.Enqueue(rv);
 		return rv;
 	}
+
 	public static void main(String[] args) throws Exception {
 		Stack_Queue sq = new Stack_Queue();
 		sq.push(1);
@@ -56,5 +58,5 @@ public class Stack_Queue {
 		System.out.println(sq.pop());
 		System.out.println(sq.peek());
 	}
-	
+
 }
