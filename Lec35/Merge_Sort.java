@@ -1,6 +1,6 @@
-package Lec34;
+package Lec35;
 
-public class Merge_Two_Sorted_Lists {
+public class Merge_Sort {
 	public class ListNode {
 		int val;
 		ListNode next;
@@ -19,6 +19,18 @@ public class Merge_Two_Sorted_Lists {
 	}
 
 	class Solution {
+		public ListNode sortList(ListNode head) {
+			if (head == null || head.next == null) {
+				return head;
+			}
+			ListNode mid = middleNode(head);
+			ListNode headB = mid.next;
+			mid.next = null;
+			ListNode A = sortList(head);
+			ListNode B = sortList(headB);
+			return mergeTwoLists(A, B);
+		}
+
 		public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
 			ListNode Dummy = new ListNode();
 			ListNode temp = Dummy;
@@ -40,8 +52,19 @@ public class Merge_Two_Sorted_Lists {
 			if (list2 == null) {
 				Dummy.next = list1;
 			}
-			return temp.next;
+			return temp;
+		}
+
+		public ListNode middleNode(ListNode head) {
+			ListNode slow = head;
+			ListNode fast = head;
+			while (fast.next != null && fast.next.next != null) {
+				slow = slow.next;
+				fast = fast.next.next;
+			}
+			return slow;
 
 		}
 	}
+
 }

@@ -1,6 +1,5 @@
 package Lec34;
 
-import Lec34.Middle_of_the_Linked.ListNode;
 
 public class Linked_List_Cycle {
 	class ListNode {
