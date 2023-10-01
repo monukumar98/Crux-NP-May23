@@ -14,7 +14,7 @@ public class LinkedList_Java {
 		ll.add(24);
 		ll.add(12);
 		System.out.println(ll);
-		System.out.println(ll.remove(3));
+		System.out.println(ll.remove());
 		System.out.println(ll);
 
 	}
