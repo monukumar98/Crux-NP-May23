@@ -1,5 +1,6 @@
 package Lec42;
 
+import java.util.Comparator;
 import java.util.PriorityQueue;
 
 public class Merge_k_Sorted_Lists {
@@ -22,7 +23,14 @@ public class Merge_k_Sorted_Lists {
 
 	class Solution {
 		public ListNode mergeKLists(ListNode[] lists) {
-			PriorityQueue<ListNode> pq = new PriorityQueue<>();
+			PriorityQueue<ListNode> pq = new PriorityQueue<>(new Comparator<ListNode>() {
+
+				@Override
+				public int compare(ListNode o1, ListNode o2) {
+					// TODO Auto-generated method stub
+					return o1.val - o2.val;
+				}
+			});
 			for (ListNode node : lists) {
 				if (node != null) {
 					pq.add(node);
