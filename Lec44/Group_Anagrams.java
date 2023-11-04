@@ -10,9 +10,7 @@ public class Group_Anagrams {
 		// TODO Auto-generated method stub
 		String [] strs= {"eat","tea","tan","ate","nat","bat"};
 		System.out.println(GroupAnagrams(strs));
-
 	}
-
 	public static List<List<String>> GroupAnagrams(String[] strs) {
 		HashMap<String, List<String>> map = new HashMap<>();
 		for (int i = 0; i < strs.length; i++) {
@@ -30,7 +28,6 @@ public class Group_Anagrams {
 		return ll;
 
 	}
-
 	public static String Key(String s) {
 		int[] freq = new int[26];
 		for (int i = 0; i < s.length(); i++) {
@@ -40,7 +37,7 @@ public class Group_Anagrams {
 		}
 		String ans = "";
 		for (int i = 0; i < freq.length; i++) {
-			ans = ans + freq[i];
+			ans = ans + freq[i]+" ";
 		}
 		return ans;
 
