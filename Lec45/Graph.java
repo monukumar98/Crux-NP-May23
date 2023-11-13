@@ -100,7 +100,7 @@ public class Graph {
 				continue;
 			}
 			// 3. Marked visited
-			visited.add(src);
+			visited.add(rv);
 			// 4. self work
 			if (rv == des) {
 				return true;
@@ -128,7 +128,7 @@ public class Graph {
 				continue;
 			}
 			// 3. Marked visited
-			visited.add(src);
+			visited.add(rv);
 			// 4. self work
 			if (rv == des) {
 				return true;
